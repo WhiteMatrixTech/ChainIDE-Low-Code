@@ -40,7 +40,7 @@ describe("api/editor/theme", function () {
 
         var context = await theme.context();
         context.should.have.a.property("page");
-        context.page.should.have.a.property("title", "Node-RED");
+        context.page.should.have.a.property("title", "ChainIDE");
         context.page.should.have.a.property("favicon", "favicon.ico");
         context.page.should.have.a.property("tabicon");
         context.page.tabicon.should.have.a.property("icon", "red/images/node-red-icon-black.svg");
