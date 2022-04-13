@@ -50,6 +50,17 @@ $secondary-text-color-disabled: #bbb; //#00C;
 $secondary-text-color-disabled-active: #666; //#009;
 $secondary-text-color-disabled-inactive: #666; //#00A;
 
+// UI control node label text
+$third-text-color: #000; //#00f;
+$third-text-color-focus: #40a9ff; //#009;
+$third-text-color-hover: #40a9ff; //#006;
+$third-text-color-active: #0050b3; //#006;
+$third-text-color-selected: #0050b3; //#00A;
+$third-text-color-inactive: #1890ff; //#006;
+$third-text-color-disabled: #bae7ff; //#00C;
+$third-text-color-disabled-active: #e6f7ff; //#009;
+$third-text-color-disabled-inactive: #e6f7ff; //#00A;
+
 // Sub label text
 $tertiary-text-color: #aaa; //#90f;
 // Heading text
@@ -205,7 +216,7 @@ $view-background: $secondary-background;
 $view-select-mode-background: $secondary-background-selected;
 $view-grid-color: #eee;
 
-$node-label-color: $secondary-text-color;
+$node-label-color: $third-text-color;
 $node-port-label-color: #888;
 $node-border: #999;
 $node-border-unknown: #f33;
@@ -236,7 +247,7 @@ $node-status-colors: (red: #c00,
   grey: #d3d3d3);
 
 
-$node-selected-color: #ff7f0e;
+$node-selected-color: #40a9ff;
 $port-selected-color: #ff7f0e;
 
 $link-color: #999;

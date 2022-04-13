@@ -25,57 +25,46 @@ Consolas,
 Courier,
 monospace;
 
-$primary-background: #292929; //#0ff;
+$primary-background: #f3f3f3; //#0ff;
 
-$secondary-background: #1b1c1e; //#ff0;
-$secondary-background-selected: #202123; //#e9e900;
-$secondary-background-inactive: #393a3b; //#f0f000;
-$secondary-background-hover: #202123; //#dd0;
+$secondary-background: #fff; //#ff0;
+$secondary-background-selected: #efefef; //#e9e900;
+$secondary-background-inactive: #f0f0f0; //#f0f000;
+$secondary-background-hover: #e6e6e6; //#dd0;
 $secondary-background-disabled: #f9f9f9; //#fafa0;
 
-$tertiary-background: #595959; //#f0f;
+$tertiary-background: #f7f7f7; //#f0f;
 
 $shadow: rgba(0, 0, 0, 0.2);
 
 // Main body text
-$primary-text-color: #EDEBE9; //#0f0;
+$primary-text-color: #555; //#0f0;
 // UI control label text
-$secondary-text-color: #BEBBB8; //#00f;
-$secondary-text-color-focus: #fff; //#009;
-$secondary-text-color-hover: #fff; //#006;
-$secondary-text-color-active: #fff; //#006;
-$secondary-text-color-selected: #fff; //#00A;
-$secondary-text-color-inactive: #fff; //#006;
+$secondary-text-color: #888; //#00f;
+$secondary-text-color-focus: #666; //#009;
+$secondary-text-color-hover: #666; //#006;
+$secondary-text-color-active: #666; //#006;
+$secondary-text-color-selected: #666; //#00A;
+$secondary-text-color-inactive: #666; //#006;
 $secondary-text-color-disabled: #bbb; //#00C;
-$secondary-text-color-disabled-active: #666; //#009;
-$secondary-text-color-disabled-inactive: #666; //#00A;
-
-// UI control node label text
-$third-text-color: #000; //#00f;
-$third-text-color-focus: #40a9ff; //#009;
-$third-text-color-hover: #40a9ff; //#006;
-$third-text-color-active: #0050b3; //#006;
-$third-text-color-selected: #0050b3; //#00A;
-$third-text-color-inactive: #1890ff; //#006;
-$third-text-color-disabled: #bae7ff; //#00C;
-$third-text-color-disabled-active: #e6f7ff; //#009;
-$third-text-color-disabled-inactive: #e6f7ff; //#00A;
+$secondary-text-color-disabled-active: #999; //#009;
+$secondary-text-color-disabled-inactive: #aaa; //#00A;
 
 // Sub label text
 $tertiary-text-color: #aaa; //#90f;
 // Heading text
-$header-text-color: $primary-text-color; //#f00;
+$header-text-color: #444; //#f00;
 
-$text-color-error: #cf0002;
-$text-color-warning: #fab563;
-$text-color-success: #59a600;
-$text-color-code: #cf0002;
-$text-color-link: #3794ff;
+$text-color-error: #AD1625;
+$text-color-warning: #CAB200;
+$text-color-success: #3a3;
+$text-color-code: #AD1625;
+$text-color-link: #0088cc;
 
 
-$primary-border-color: #292929; //#f00;
-$secondary-border-color: #393a3b !important; //#0f0;
-$tertiary-border-color: #393c42; //#00f;
+$primary-border-color: #bbbbbb; //#f00;
+$secondary-border-color: #dddddd; //#0f0;
+$tertiary-border-color: #ccc; //#00f;
 
 $border-color-error: #DF2935;
 $border-color-warning: #FFCF70;
@@ -93,7 +82,7 @@ $form-input-background: $secondary-background;
 $form-input-background-disabled: $secondary-background-disabled;
 $form-button-background: $secondary-background-selected;
 
-$form-tips-background: #2b2923;
+$form-tips-background: #ffe;
 
 
 $text-editor-color: #4D4D4C; //#00f;
@@ -119,7 +108,7 @@ $list-item-secondary-color: $secondary-text-color;
 $list-item-background: $secondary-background;
 $list-item-background-disabled: $secondary-background-inactive;
 $list-item-background-hover: $secondary-background-hover;
-$list-item-background-selected: #263c42; // #fff1e5;
+$list-item-background-selected: #ffebc7; // #fff1e5;
 $list-item-border-selected: $secondary-text-color-selected;
 
 $tab-text-color-active: $header-text-color;
@@ -134,7 +123,7 @@ $tab-background-selected: $secondary-background-selected;
 $tab-background-inactive: $secondary-background-inactive;
 $tab-background-hover: $secondary-background-hover;
 
-$palette-header-background: $secondary-background;
+$palette-header-background: $primary-background;
 $palette-header-color: $header-text-color;
 $palette-content-background: $secondary-background;
 
@@ -151,8 +140,8 @@ $workspace-button-color-active: $secondary-text-color-active;
 $workspace-button-color-selected: $secondary-text-color-selected;
 
 $workspace-button-color-primary: #eee;
-$workspace-button-background-primary: #106ebe;
-$workspace-button-background-primary-hover: #0e62ac;
+$workspace-button-background-primary: #AD1625;
+$workspace-button-background-primary-hover: #6E0A1E;
 
 $workspace-button-color-focus-outline: $form-input-focus-color;
 
@@ -197,8 +186,8 @@ $diff-merge-header-color: #800080;
 $diff-merge-header-background: #e5f9ff;
 $diff-merge-header-border-color: #b2edff;
 
-$menuBackground: $secondary-background;
-$menuDivider: $primary-border-color;
+$menuBackground: $primary-background;
+$menuDivider: $secondary-border-color;
 $menuColor: $primary-text-color;
 $menuActiveColor: $secondary-text-color-active;
 $menuActiveBackground: $secondary-background-hover;
@@ -216,7 +205,7 @@ $view-background: $secondary-background;
 $view-select-mode-background: $secondary-background-selected;
 $view-grid-color: #eee;
 
-$node-label-color: $third-text-color;
+$node-label-color: #333;
 $node-port-label-color: #888;
 $node-border: #999;
 $node-border-unknown: #f33;
@@ -241,13 +230,13 @@ $node-status-changed-border: rgb(28, 102, 140);
 $node-status-changed-background: rgb(0, 188, 255);
 
 $node-status-colors: (red: #c00,
-    green: #5a8,
-    yellow: #F9DF31,
-    blue: #53A3F3,
-    grey: #d3d3d3);
+  green: #5a8,
+  yellow: #F9DF31,
+  blue: #53A3F3,
+  grey: #d3d3d3);
 
 
-$node-selected-color: #40a9ff;
+$node-selected-color: #ff7f0e;
 $port-selected-color: #ff7f0e;
 
 $link-color: #999;
@@ -259,14 +248,14 @@ $link-unknown-color: #f00;
 $clipboard-textarea-background: #F3E7E7;
 
 
-$deploy-button-color: #edebe9;
-$deploy-button-color-active: #edebe9;
-$deploy-button-color-disabled: #edebe9;
-$deploy-button-background: #106ebe;
-$deploy-button-background-hover: #0e62ac;
-$deploy-button-background-active: #0e62ac;
-$deploy-button-background-disabled: #595959;
-$deploy-button-background-disabled-hover: #595959;
+$deploy-button-color: #eee;
+$deploy-button-color-active: #ccc;
+$deploy-button-color-disabled: #999;
+$deploy-button-background: #8C101C;
+$deploy-button-background-hover: #6E0A1E;
+$deploy-button-background-active: #4C0A17;
+$deploy-button-background-disabled: #444;
+$deploy-button-background-disabled-hover: #555;
 
 
 $header-background: #000;
@@ -321,11 +310,3 @@ $tourGuide-heading-color: #c56c6c;
 $text-color-green: $text-color-success;
 $info-text-code-color: $text-color-code;
 $info-text-link-color: $text-color-link;
-
-::-webkit-scrollbar-track {
-    background-color: #1a1c1e;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: hsla(0, 0%, 47%, .4);
-}
