@@ -112,10 +112,10 @@ describe("api/editor/theme", function () {
                     "menu-item-import-library": false,
                     "menu-item-export-library": false,
                     "menu-item-keyboard-shortcuts": false,
-                    "menu-item-help": {
-                        label: "Alternative Help Link Text",
-                        url: "http://example.com"
-                    }
+                    // "menu-item-help": {
+                    //     label: "Alternative Help Link Text",
+                    //     url: "http://example.com"
+                    // }
                 },
 
                 userMenu: false, // Hide the user-menu even if adminAuth is enabled
@@ -169,7 +169,7 @@ describe("api/editor/theme", function () {
         settings.menu.should.have.a.property("menu-item-import-library", false);
         settings.menu.should.have.a.property("menu-item-export-library", false);
         settings.menu.should.have.a.property("menu-item-keyboard-shortcuts", false);
-        settings.menu.should.have.a.property("menu-item-help", { label: "Alternative Help Link Text", url: "http://example.com" });
+        // settings.menu.should.have.a.property("menu-item-help", { label: "Alternative Help Link Text", url: "http://example.com" });
         settings.should.have.a.property("palette");
         settings.palette.should.have.a.property("editable", true);
         settings.palette.should.have.a.property("catalogues", ['https://catalogue.nodered.org/catalogue.json']);
