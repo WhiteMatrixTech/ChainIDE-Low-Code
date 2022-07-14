@@ -76,3 +76,36 @@ It is maintained by:
 ## Copyright and license
 
 Copyright OpenJS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
+
+## 关于数据流的传递
+以function节点为例（所有交互都在node端执行）
+### 数据获取
+1. node的input事件监听获取上游节点数据，内部根据processMessage的state继续传递
+```
+        node.on('input', function(msg, send, done) {
+                // msg里获取的是上游节点传入的
+        })
+        else if(state === RESOLVED) {
+                // 这里的msg依然是上游节点传入的
+                processMessage(msg, send, done);
+        }
+```
+2. processMessage方法处理，context拿到了当前function节点代码编辑界面的修改后的值
+```
+        processMessage = function (msg, send, done) {
+                    var start = process.hrtime();
+                    context.msg = msg;
+                    context.__send__ = send;
+                    context.__done__ = done;
+
+                    node.script.runInContext(context);
+                    context.results.then(function(results) {
+                        // results是被function节点编辑后的数据
+                        sendResults(node,send,msg._msgid,results,false);
+                        if (handleNodeDoneCall) {
+                            done();
+                        }
+                    }
+```
+3. sendResults方法传给下游节点，内置了send方法
+
