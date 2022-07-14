@@ -78,8 +78,7 @@ It is maintained by:
 Copyright OpenJS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
 
 ## 关于数据流的传递
-以function节点为例（所有交互都在node端执行）
-### 数据获取
+### function节点（所有交互都在node端执行）
 1. node的input事件监听获取上游节点数据，内部根据processMessage的state继续传递
 ```
         node.on('input', function(msg, send, done) {
@@ -109,3 +108,24 @@ Copyright OpenJS Foundation and other contributors, https://openjsf.org under [t
 ```
 3. sendResults方法传给下游节点，内置了send方法
 
+### debug节点
+1. input事件监听上游节点数据，传入prepareValue方法
+```
+this.on("input", function(msg, send, done) {
+        // 这里就是上游传入的数据
+}
+```
+2. prepareValue方法获取到数据，截取特定的property，形成output
+```
+function prepareValue(msg, done) {
+        if (preparedEditExpression) {
+                // 如果设定了特定的output字段，在这里处理
+        } else {
+                // 默认处理payload字段
+                var property = "payload";
+                var output = msg[property];
+                // done完成，输出
+                done(null,{id:node.id, z:node.z, _alias: node._alias,  path:node._flow.path, name:node.name, topic:msg.topic, property:property, msg:output});
+            }
+        }
+```
