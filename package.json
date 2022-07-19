@@ -26,6 +26,7 @@
         }
     ],
     "dependencies": {
+        "@remix-project/remix-simulator": "^0.2.15",
         "@white-matrix/web3-solidity-wallet": "^1.1.6",
         "acorn": "8.7.0",
         "acorn-walk": "8.2.0",
